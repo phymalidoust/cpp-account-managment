@@ -1,10 +1,18 @@
 # Account managment system
 
-This system allows the user to create a user account.
+This system allows the user to create a user account 
+and later modify personal and credit information.  
 A menu list appears with multiple options. The user 
 can choose what to do when the main menu pops up. 
 The options are as follows:
-1. 
+- [x]  **01** NEW ACCOUNT
+- [x]  **02** DEPOSIT AMOUNT
+- [x]  **03** WITHDRAW AMOUNT
+- [x]  **04** BALANCE ENQUIRY
+- [x]  **05** ALL ACCOUNT HOLDER LIST
+- [x]  **06** CLOSE AN ACCOUNT
+- [x]  **07** MODIFY AN ACCOUNT
+- [x]  **08** EXIT
 
 
 ### Core files and their tasks
