@@ -22,6 +22,8 @@ The source code is commented.
 2.
 ```
 ### How to run it
-```c++
-g++ main.cpp; a.out
+```c++20
+The C++20 compiler is used to compile and debug the code.
+The following command can be used to  
+g++ -o main.exe main.cpp; ./main.exe
 ```
