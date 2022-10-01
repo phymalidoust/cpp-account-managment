@@ -24,6 +24,7 @@ The source code is commented.
 ### How to run it
 ```c++20
 The C++20 compiler is used to compile and debug the code.
-The following command can be used to  
+The following command can be used to run the code
+ 
 g++ -o main.exe main.cpp; ./main.exe
 ```
