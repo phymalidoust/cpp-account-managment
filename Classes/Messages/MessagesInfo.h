@@ -7,6 +7,8 @@ class MessagesInfo {
 public:
     MessagesInfo();
     void welcmWords();
+    void openingAccount();
+    void openingDone();
 
 };
 

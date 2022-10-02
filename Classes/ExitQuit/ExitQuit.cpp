@@ -9,10 +9,8 @@ ExitQuit::ExitQuit() {
     char ans;
     MainMenu MainMenuObj;
     ans = MainMenuObj.getYesNo(YesNo);
-//    cout << "ans is " << ans;
     if(ans == 'y'){stopFlag = exitFunc();}
     else{
-//    system("clear");
     MainMenuObj.headerMenu();
     }
 }

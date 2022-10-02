@@ -2,6 +2,7 @@
 #include <fstream>
 #include "OpenNewAccount.h"
 #include "../GetPath/GetPath.h"
+#include "../Messages/MessagesInfo.h"
 using namespace std;
 
 OpenNewAccount::OpenNewAccount() {}
@@ -41,10 +42,9 @@ void OpenNewAccount::readFromFile() {
 
 void OpenNewAccount::writeToFile() {
 
-    cout << "|-----------------------------------------------|\n";
-    cout << "|          THANK YOU FOR CHOSING US!            |\n";
-    cout << "|            Opening a new account              |\n";
-    cout << "|-----------------------------------------------|\n";
+    MessagesInfo MessageObj;
+    MessageObj.openingAccount();
+
 
     string firstName, lastName, accType, deposit;
     int accTypeInt;
@@ -72,10 +72,7 @@ void OpenNewAccount::writeToFile() {
         cout << "Please contact the developer at 'phymalidoust@gmail.com'.\n";}
     else {
         myFile << "\n" << nationalCode << "," << firstName << "," << lastName << "," << accType << "," <<deposit;
-        cout << "|-----------------------------------------------|\n";
-        cout << "|             CONGRADULATIONS!                  |\n";
-        cout << "|      Your account has been created.           |\n";
-        cout << "|-----------------------------------------------|\n";
+        MessageObj.openingDone();
     }
 
 

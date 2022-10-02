@@ -11,3 +11,17 @@ void MessagesInfo::welcmWords() {
     cout << "|           ACCOUNT MANAGMENT SYSTEM            |\n";
     cout << "|-----------------------------------------------|\n";
 }
+
+void MessagesInfo::openingAccount() {
+    cout << "|-----------------------------------------------|\n";
+    cout << "|          THANK YOU FOR CHOSING US!            |\n";
+    cout << "|            Opening a new account              |\n";
+    cout << "|-----------------------------------------------|\n";
+}
+
+void MessagesInfo::openingDone() {
+    cout << "|-----------------------------------------------|\n";
+    cout << "|             CONGRADULATIONS!                  |\n";
+    cout << "|      Your account has been created.           |\n";
+    cout << "|-----------------------------------------------|\n";
+}
