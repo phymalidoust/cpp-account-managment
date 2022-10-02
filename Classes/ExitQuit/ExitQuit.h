@@ -7,8 +7,9 @@ class ExitQuit {
 
 public:
     ExitQuit();
-    void exitFunc();
+    bool exitFunc();
     bool exitFlag();
+    bool stopFlag = false;
 
 };
 

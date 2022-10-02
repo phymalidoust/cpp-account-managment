@@ -6,16 +6,14 @@
 #include <string>
 using namespace std;
 
-
-
 int main() {
 
     MessagesInfo MessageObj;
     MessageObj.welcmWords();
     MainMenu MainMenuObj;
     MainMenuObj.headerMenu();
-    unsigned int MainMenuChoice = MainMenuObj.getChoice(0);
-    bool exitFlag = false;
+    unsigned int MainMenuChoice;
+    bool stopFlag = false;
 
     do{
         MainMenuChoice = MainMenuObj.getChoice(0);
@@ -38,9 +36,11 @@ int main() {
                 break;
             case 9:
                 ExitQuit Ex;
+                stopFlag = Ex.stopFlag;
+//                cout << stopFlag<<endl;
         }
 
-    }while (!exitFlag);
+    }while (!stopFlag);
 
 
 
