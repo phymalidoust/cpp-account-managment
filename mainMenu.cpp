@@ -34,6 +34,7 @@ unsigned int mainMenu::mainMenuChoice(unsigned int choice){
         try{
             choice = stoi(input);
         }catch(...){
+            counter++;
             continue;}
         counter++;
     }
