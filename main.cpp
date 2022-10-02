@@ -2,6 +2,7 @@
 #include "Classes/Messages/MessagesInfo.h"
 #include "Classes/MainMenu/MainMenu.h"
 #include "Classes/ExitQuit/ExitQuit.h"
+#include "Classes/OpenNewAccount/OpenNewAccount.h"
 #include "Classes/GetPath/GetPath.h"
 #include <string>
 using namespace std;
@@ -14,12 +15,18 @@ int main() {
     MainMenuObj.headerMenu();
     unsigned int MainMenuChoice;
     bool stopFlag = false;
+    string nationalCode;
+    OpenNewAccount newAcc;
 
     do{
         MainMenuChoice = MainMenuObj.getChoice(0);
         switch (MainMenuChoice) {
             case 1:
-//            break;
+                cout << "Enter your national code (5 digits): ";
+                cin >> nationalCode;
+                newAcc.nationalCode = nationalCode;
+                newAcc.readFromFile();
+                break;
             case 2:
                 break;
             case 3:

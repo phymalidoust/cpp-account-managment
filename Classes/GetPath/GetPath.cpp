@@ -7,7 +7,7 @@ GetPath::GetPath() {}
 
 string GetPath::dataBase(){
     string path;
-    path = "./Classes/dataBase/dataBase.db";
+    path = "../DataBase/DataBase.csv";
     return path;
 }
 
