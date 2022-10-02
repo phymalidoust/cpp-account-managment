@@ -1,11 +1,11 @@
-#include "getPath.h"
+#include "GetPath.h"
 #include <string>
 using namespace std;
 
-getPath::getPath() {}
+GetPath::GetPath() {}
 
 
-string getPath::dataBase(){
+string GetPath::dataBase(){
     string path;
     path = "./Classes/dataBase/dataBase.db";
     return path;

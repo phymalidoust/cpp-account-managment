@@ -2,10 +2,10 @@
 #define PROJECT_MAINMENU_H
 
 
-class mainMenu {
+class MainMenu {
 
 public:
-    mainMenu();
+    MainMenu();
     unsigned int mainMenuChoice(unsigned int choice = 0);
     void inputError();
 

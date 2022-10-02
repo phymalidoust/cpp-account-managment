@@ -1,11 +1,11 @@
 #include <iostream>
 #include "../Messages/MessagesInfo.h"
-#include "mainMenu.h"
+#include "MainMenu.h"
 #include <string>
 using namespace std;
 
 
-mainMenu::mainMenu() {
+MainMenu::MainMenu() {
 
     cout << "| MAIN MENU                                     |\n";
     cout << "| 01 - OPEN A NEW ACCOUNT                       |\n";
@@ -15,7 +15,7 @@ mainMenu::mainMenu() {
     cout << "| 05 - ALL ACCOUNT HOLDER LIST                  |\n";
     cout << "| 06 - CLOSE AN ACCOUNT                         |\n";
     cout << "| 07 - MODIFY PERSONAL INFORMATION              |\n";
-    cout << "| 08 - MoDIFY ACCOUNT BALANCE                   |\n";
+    cout << "| 08 - MODIFY ACCOUNT BALANCE                   |\n";
     cout << "| 09 - EXIT                                     |\n";
     cout << "|-----------------------------------------------|\n";
 
@@ -23,7 +23,7 @@ mainMenu::mainMenu() {
     cout << mainMenuChoice(0);
 }
 
-unsigned int mainMenu::mainMenuChoice(unsigned int choice){
+unsigned int MainMenu::mainMenuChoice(unsigned int choice){
 
     string input;
     unsigned int counter = 0;
@@ -43,6 +43,6 @@ unsigned int mainMenu::mainMenuChoice(unsigned int choice){
     return choice;
 }
 
-void mainMenu::inputError() {
+void MainMenu::inputError() {
     cout << "Invalid input ! Only integers between 01 and 09 are valid.\n";
 }

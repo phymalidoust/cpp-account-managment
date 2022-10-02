@@ -1,6 +1,6 @@
 #include <iostream>
 #include "MessagesInfo.h"
-#include "../mainMenu/mainMenu.h"
+#include "../mainMenu/MainMenu.h"
 using namespace std;
 
 MessagesInfo::MessagesInfo() {}

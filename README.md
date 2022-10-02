@@ -10,9 +10,10 @@ The options are as follows:
 - [x]  **03** WITHDRAW AMOUNT
 - [x]  **04** BALANCE ENQUIRY
 - [x]  **05** ALL ACCOUNT HOLDER LIST
-- [x]  **06** CLOSE AN ACCOUNT
-- [x]  **07** MODIFY AN ACCOUNT
-- [x]  **08** EXIT
+- [x]  **06** CLOSE AN ACCOUNT TYPE
+- [x]  **07** ODIFY PERSONAL INFORMATION
+- [x]  **08** MODIFY ACCOUNT BALANCE
+- [x]  **09** EXIT
 
 The project was fully carried out by Mohammad Alidoust.
 

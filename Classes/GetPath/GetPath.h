@@ -4,10 +4,10 @@
 #include <string>
 using namespace std;
 
-class getPath {
+class GetPath {
 
 public:
-    getPath();
+    GetPath();
     string dataBase();
 
 };

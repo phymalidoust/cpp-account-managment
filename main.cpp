@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Classes/Messages/MessagesInfo.h"
-#include "Classes/mainMenu/mainMenu.h"
-#include "Classes/getPath/getPath.h"
+#include "Classes/MainMenu/MainMenu.h"
+#include "Classes/GetPath/GetPath.h"
 #include <string>
 using namespace std;
 
@@ -10,9 +10,9 @@ int main() {
 
     MessagesInfo mess;
     mess.welcmWords();
-    mainMenu m;
+    MainMenu m;
 
-//    getPath db;
+//    GetPath db;
 //    cout << db.dataBase();
 
 //    string input;
