@@ -23,7 +23,7 @@ bool ParseDB::existDB() {
     return Flag;
 }
 
-void ParseDB::readDB() {
+bool ParseDB::readDB() {
     fstream myFile;
     GetPath address;
     string pathDB = address.dataBase();
@@ -50,27 +50,44 @@ void ParseDB::readDB() {
     }
     myFile.close();
 
+    for(int i=0;i<content.size();i++)
+    {
+        for(int j=0;j<content[i].size();j++)
+        {
+//            cout << content[0][j] << " ";
+            if(content[i][0] == nationalCode){
+                firstName = content[i][1];
+                lastName = content[i][2];
+                accType = content[i][3];
+                credit = content[i][4];
+//                cout << i << " " << j << "\n";
+//                cout << "First name is " << firstName << "\n";
+                Flag = true;
+                break;
+            }
+        }
+    }
 
+    return Flag;
 }
 
 
 
 bool ParseDB::accountExist() {
 
-    fstream myFile;
-    GetPath address;
-    string pathDB = address.dataBase();
-    string line;
+    cout << " accountExist ";
+    string firstName;
     bool Flag = false;
+    cout << "content.size() is " << content.size() << "\n";
 
         for(int i=0;i<content.size();i++)
     {
         for(int j=0;j<content[i].size();j++)
         {
+            cout << content[0][j] << " ";
             if(content[0][j] == nationalCode){
-                cout << "Hello " << content[1][j] << " !\n";
-                cout << "You have already an account with us !\n";
-                cout << "Please chose other items than 01:\n";
+                firstName = content[0][j];
+                cout << "First name is " << firstName;
                 Flag = true;
                 break;
             }

@@ -9,11 +9,12 @@ class ParseDB {
 
 public:
     ParseDB();
-    void readDB();
+    bool readDB();
     bool existDB();
     bool accountExist();
     string nationalCode;
     vector<vector<string>> content;
+    string firstName, lastName, accType, credit;
 
 };
 

@@ -5,8 +5,13 @@
 #include "Classes/OpenNewAccount/OpenNewAccount.h"
 #include "Classes/BalanceQuery/BalanceQuery.h"
 #include "Classes/GetPath/GetPath.h"
+#include "Classes/ParseDB/ParseDB.h"
 #include <string>
+#include <vector>
 using namespace std;
+
+bool stopFlag = false;
+string nationalCode, firstName, lastName, accType, credit;
 
 int main() {
 
@@ -15,10 +20,12 @@ int main() {
     MainMenu MainMenuObj;
     MainMenuObj.headerMenu();
     unsigned int MainMenuChoice;
-    bool stopFlag = false;
-    string nationalCode;
     OpenNewAccount newAcc;
     BalanceQuery balance;
+    ParseDB parsedDB;
+    parsedDB.existDB();
+//    parsedDB.readDB();
+
 
 
     do{
@@ -27,14 +34,22 @@ int main() {
             case 1:
                 cout << "Enter your national code (5 digits): ";
                 cin >> nationalCode;
-                newAcc.nationalCode = nationalCode;
-                newAcc.readFromFile();
+                parsedDB.nationalCode = nationalCode;
+                if(parsedDB.readDB()){
+                    cout << parsedDB.firstName << " !\n";
+                    cout << "You have already an account with us !\n";
+                    cout << "Please chose other items than 01:\n";
+                }
                 break;
             case 2:
                 cout << "Enter your national code (5 digits): ";
                 cin >> nationalCode;
-                balance.nationalCode = nationalCode;
-                balance.checkCredit();
+                parsedDB.nationalCode = nationalCode;
+                if(parsedDB.readDB()){
+                    cout << parsedDB.firstName << " !\n";
+                    cout << "The credit of your account is " << parsedDB.credit << " NOK.\n";
+//                    cout << "Please chose other items than 01:\n";
+                }
                 break;
             case 3:
                 break;
