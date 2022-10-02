@@ -25,3 +25,9 @@ void MessagesInfo::openingDone() {
     cout << "|      Your account has been created.           |\n";
     cout << "|-----------------------------------------------|\n";
 }
+
+void MessagesInfo::checkingcredit() {
+    cout << "|-----------------------------------------------|\n";
+    cout << "|          Checking you account balance         |\n";
+    cout << "|-----------------------------------------------|\n";
+}

@@ -3,6 +3,7 @@
 #include "Classes/MainMenu/MainMenu.h"
 #include "Classes/ExitQuit/ExitQuit.h"
 #include "Classes/OpenNewAccount/OpenNewAccount.h"
+#include "Classes/BalanceQuery/BalanceQuery.h"
 #include "Classes/GetPath/GetPath.h"
 #include <string>
 using namespace std;
@@ -17,6 +18,8 @@ int main() {
     bool stopFlag = false;
     string nationalCode;
     OpenNewAccount newAcc;
+    BalanceQuery balance;
+
 
     do{
         MainMenuChoice = MainMenuObj.getChoice(0);
@@ -28,6 +31,10 @@ int main() {
                 newAcc.readFromFile();
                 break;
             case 2:
+                cout << "Enter your national code (5 digits): ";
+                cin >> nationalCode;
+                balance.nationalCode = nationalCode;
+                balance.checkCredit();
                 break;
             case 3:
                 break;

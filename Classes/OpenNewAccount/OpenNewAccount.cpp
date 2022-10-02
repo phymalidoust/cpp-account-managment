@@ -12,7 +12,7 @@ void OpenNewAccount::readFromFile() {
     GetPath address;
     string pathDB = address.dataBase();
     string line;
-    bool stopFlag = false;
+    bool Flag = false;
 
     myFile.open(pathDB, fstream::app);
     myFile.close();
@@ -26,13 +26,13 @@ void OpenNewAccount::readFromFile() {
             if(line.substr(0,counter) == nationalCode){
                 cout << "You have already an account with us !\n";
                 cout << "Please chose other items than 01:\n";
-                stopFlag = true;
+                Flag = true;
                 break;
             }
         }
         myFile.close();
 
-         if(!stopFlag) {writeToFile();}
+         if(!Flag) {writeToFile();}
 
 
     }
@@ -53,13 +53,13 @@ void OpenNewAccount::writeToFile() {
     cin >> firstName;
     cout << "Enter your last name: ";
     cin >> lastName;
-    cout << "\t\t   Accout type  \n";
-    cout << "\t\t 01. Short term \n";
-    cout << "\t\t 02. Long term  \n";
+    cout << "\t\t\t   Accout type  \n";
+    cout << "\t\t 01. Short term (1 month) \n";
+    cout << "\t\t 02. Long term  (more than 1 year) \n";
     cout << "Enter your accout type (01/02): ";
     cin >> accTypeInt;
     if(accTypeInt == 1){accType = "ShortTerm";}else{accType = "LongTerm";}
-    cout << "Enter the amount of deposit: ";
+    cout << "Enter the amount of deposit (in NOK): ";
     cin >> deposit;
 
 

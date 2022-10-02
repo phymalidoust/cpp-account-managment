@@ -9,6 +9,7 @@ public:
     void welcmWords();
     void openingAccount();
     void openingDone();
+    void checkingcredit();
 
 };
 
