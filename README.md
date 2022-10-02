@@ -6,14 +6,13 @@ A menu list appears with multiple options. The user
 can choose what to do when the main menu pops up. 
 The options are as follows:
 - [x]  **01** OPEN NEW ACCOUNT
-- [x]  **02** DEPOSIT AMOUNT
-- [x]  **03** WITHDRAW AMOUNT
-- [x]  **04** BALANCE ENQUIRY
-- [x]  **05** ALL ACCOUNT HOLDER LIST
-- [x]  **06** CLOSE AN ACCOUNT TYPE
-- [x]  **07** ODIFY PERSONAL INFORMATION
-- [x]  **08** MODIFY ACCOUNT BALANCE
-- [x]  **09** LOG OUT
+- [x]  **02** BALANCE ENQUIRY
+- [x]  **03** DEPOSIT AMOUNT
+- [x]  **04** WITHDRAW AMOUNT 
+- [x]  **05** MODIFY PERSONAL INFORMATION
+- [x]  **06** MODIFY ACCOUNT TYPE
+- [x]  **07** CLOSE AN ACCOUNT
+- [x]  **08** LOG OUT
 
 The project was fully carried out by Mohammad Alidoust.
 
