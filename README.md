@@ -5,7 +5,7 @@ and later modify personal and credit information.
 A menu list appears with multiple options. The user 
 can choose what to do when the main menu pops up. 
 The options are as follows:
-- [x]  **01** NEW ACCOUNT
+- [x]  **01** OPEN NEW ACCOUNT
 - [x]  **02** DEPOSIT AMOUNT
 - [x]  **03** WITHDRAW AMOUNT
 - [x]  **04** BALANCE ENQUIRY
