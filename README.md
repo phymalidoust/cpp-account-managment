@@ -13,7 +13,7 @@ The options are as follows:
 - [x]  **06** CLOSE AN ACCOUNT TYPE
 - [x]  **07** ODIFY PERSONAL INFORMATION
 - [x]  **08** MODIFY ACCOUNT BALANCE
-- [x]  **09** EXIT
+- [x]  **09** LOG OUT
 
 The project was fully carried out by Mohammad Alidoust.
 
