@@ -1,14 +1,19 @@
 #include <iostream>
-#include "welcmWords.h"
-#include "mainMenu.h"
+#include "Classes/Messages/MessagesInfo.h"
+#include "Classes/mainMenu/mainMenu.h"
+#include "Classes/getPath/getPath.h"
 #include <string>
 using namespace std;
 
 
 int main() {
 
-    welcmWords();
+    MessagesInfo mess;
+    mess.welcmWords();
     mainMenu m;
+
+//    getPath db;
+//    cout << db.dataBase();
 
 //    string input;
 //    cin >> input;

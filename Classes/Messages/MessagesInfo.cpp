@@ -1,10 +1,11 @@
 #include <iostream>
-#include "welcmWords.h"
-#include "mainMenu.h"
+#include "MessagesInfo.h"
+#include "../mainMenu/mainMenu.h"
 using namespace std;
 
+MessagesInfo::MessagesInfo() {}
 
-welcmWords::welcmWords() {
+void MessagesInfo::welcmWords() {
     cout << "|-----------------------------------------------|\n";
     cout << "|                 WELCOM TO THE                 |\n";
     cout << "|           ACCOUNT MANAGMENT SYSTEM            |\n";

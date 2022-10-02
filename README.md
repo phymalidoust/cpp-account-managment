@@ -14,6 +14,8 @@ The options are as follows:
 - [x]  **07** MODIFY AN ACCOUNT
 - [x]  **08** EXIT
 
+The project was fully carried out by Mohammad Alidoust.
+
 
 ### Core files and their tasks
 ```buildoutcfg

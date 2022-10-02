@@ -1,0 +1,16 @@
+#ifndef PROJECT_GETPATH_H
+#define PROJECT_GETPATH_H
+
+#include <string>
+using namespace std;
+
+class getPath {
+
+public:
+    getPath();
+    string dataBase();
+
+};
+
+
+#endif
