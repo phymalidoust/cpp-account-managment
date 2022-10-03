@@ -11,11 +11,12 @@ public:
     ParseDB();
     bool readDB();
 //    bool existDB();
-    bool accountExist();
+//    bool accountExist();
     string nationalCode;
 //    vector<vector<string>> content;
     string firstName, lastName, accType, credit;
     unsigned int userNo;
+//    bool writeToDB();
 
 };
 

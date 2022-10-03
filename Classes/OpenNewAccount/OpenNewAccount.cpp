@@ -63,20 +63,24 @@ void OpenNewAccount::writeToFile() {
     cin >> deposit;
 
 
-
+    unsigned int userNo = 0;
     UserInfo accInfo;
     GetPath address;
     string pathDB = address.userInfoBinary();
     fstream myFile;
-    myFile.open(pathDB, ios::binary | ios::app);
+    myFile.open(pathDB, ios::binary | ios::in | ios::out | ios::app);
     if(!myFile){cout << "We couldn't open the file.\n";
         cout << "Please contact the developer at 'phymalidoust@gmail.com'.\n";}
     else {
+        while(myFile.read((char *) &accInfo, sizeof(UserInfo))){
+            userNo++;
+        }
         accInfo.nationalCode = nationalCode;
         accInfo.firstName = firstName;
         accInfo.lastName = lastName;
         accInfo.accType = accType;
         accInfo.credit = deposit;
+        accInfo.userNo = userNo;
         myFile.write((char *) &accInfo, sizeof(UserInfo));
         MessageObj.openingDone();
     }

@@ -17,14 +17,13 @@ bool ParseDB::readDB() {
 
 //    string firstName, lastName, accType, credit;
     bool Flag = false;
-    unsigned int userNo;
+    unsigned int userNo = 0;
 
     UserInfo accInfo;
     GetPath address;
     string pathDB = address.userInfoBinary();
     fstream myFile;
-    myFile.open(pathDB, ios::binary | ios::app);
-    myFile.close();
+
     myFile.open(pathDB, ios::binary | ios::in);
     if(!myFile){cout << "We couldn't open the file.\n";
         cout << "Please contact the developer at 'phymalidoust@gmail.com'.\n";}
@@ -36,10 +35,16 @@ bool ParseDB::readDB() {
                 lastName = accInfo.lastName;
                 accType = accInfo.accType;
                 credit = accInfo.credit;
+                break;
             }
+            userNo++;
         }
         }
     myFile.close();
     return Flag;
     }
+
+
+
+
 
