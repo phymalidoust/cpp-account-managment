@@ -9,10 +9,9 @@ The options are as follows:
 - [x]  **02** BALANCE ENQUIRY
 - [x]  **03** DEPOSIT AMOUNT
 - [x]  **04** WITHDRAW AMOUNT 
-- [x]  **05** MODIFY PERSONAL INFORMATION
-- [x]  **06** MODIFY ACCOUNT TYPE
-- [x]  **07** CLOSE AN ACCOUNT
-- [x]  **08** LOG OUT
+- [x]  **05** MODIFY ACCOUNT INFORMATION
+- [x]  **06** CLOSE AN ACCOUNT
+- [x]  **07** LOG OUT
 
 
 
