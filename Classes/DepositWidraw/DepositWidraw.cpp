@@ -11,7 +11,7 @@ DepositWidraw::DepositWidraw() {}
 
 void DepositWidraw::depositCredit() {
     ParseDB parsedDB;
-    parsedDB.existDB();
+//    parsedDB.existDB();
 
     cout << "Enter your national code (5 digits): ";
     cin >> nationalCode;

@@ -11,3 +11,8 @@ string GetPath::dataBase(){
     return path;
 }
 
+string GetPath::userInfoBinary(){
+    string path;
+    path = "../DataBase/Accounts.dat";
+    return path;
+}

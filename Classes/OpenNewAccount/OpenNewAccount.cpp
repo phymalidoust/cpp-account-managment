@@ -3,6 +3,7 @@
 #include "OpenNewAccount.h"
 #include "../GetPath/GetPath.h"
 #include "../Messages/MessagesInfo.h"
+#include "../UserInfo/UserInfo.h"
 using namespace std;
 
 OpenNewAccount::OpenNewAccount() {}
@@ -63,17 +64,23 @@ void OpenNewAccount::writeToFile() {
 
 
 
+    UserInfo accInfo;
     GetPath address;
-    string pathDB = address.dataBase();
+    string pathDB = address.userInfoBinary();
     fstream myFile;
-    myFile.open(pathDB, ios::app);
+    myFile.open(pathDB, ios::binary | ios::app);
     if(!myFile){cout << "We couldn't open the file.\n";
         cout << "Please contact the developer at 'phymalidoust@gmail.com'.\n";}
     else {
-        myFile << "\n" << nationalCode << "," << firstName << "," << lastName << "," << accType << "," <<deposit;
+        accInfo.nationalCode = nationalCode;
+        accInfo.firstName = firstName;
+        accInfo.lastName = lastName;
+        accInfo.accType = accType;
+        accInfo.credit = deposit;
+        myFile.write((char *) &accInfo, sizeof(UserInfo));
         MessageObj.openingDone();
     }
 
-
+    myFile.close();
 
 }

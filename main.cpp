@@ -6,6 +6,7 @@
 #include "Classes/BalanceQuery/BalanceQuery.h"
 #include "Classes/GetPath/GetPath.h"
 #include "Classes/ParseDB/ParseDB.h"
+#include "Classes/UserInfo/UserInfo.h"
 #include <string>
 #include <vector>
 using namespace std;
@@ -25,8 +26,12 @@ int main() {
     OpenNewAccount newAcc;
     BalanceQuery balance;
     ParseDB parsedDB;
-    parsedDB.existDB();
+//    parsedDB.existDB();
 //    parsedDB.readDB();
+
+//UserInfo accountInfo;
+//accountInfo.firstName = "Hasan";
+//cout << accountInfo.firstName<<endl;
 
 
 
@@ -41,7 +46,7 @@ int main() {
                     cout << parsedDB.firstName << " !\n";
                     cout << "You have already an account with us !\n";
                     cout << "Please chose other items than 01:\n";
-//                }else{ cout << "Size of DB = " << parsedDB.content.size() <<"\n";
+                }else{
                     newAcc.nationalCode = nationalCode;
                     newAcc.writeToFile();}
                 break;

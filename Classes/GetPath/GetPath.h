@@ -9,6 +9,7 @@ class GetPath {
 public:
     GetPath();
     string dataBase();
+    string userInfoBinary();
 
 };
 

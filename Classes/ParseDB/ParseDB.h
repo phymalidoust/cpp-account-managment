@@ -10,11 +10,12 @@ class ParseDB {
 public:
     ParseDB();
     bool readDB();
-    bool existDB();
+//    bool existDB();
     bool accountExist();
     string nationalCode;
-    vector<vector<string>> content;
+//    vector<vector<string>> content;
     string firstName, lastName, accType, credit;
+    unsigned int userNo;
 
 };
 
