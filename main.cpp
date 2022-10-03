@@ -12,8 +12,10 @@ using namespace std;
 
 bool stopFlag = false;
 string nationalCode, firstName, lastName, accType, credit;
+//vector<vector<string>> content;
 
 int main() {
+
 
     MessagesInfo MessageObj;
     MessageObj.welcmWords();
@@ -39,7 +41,8 @@ int main() {
                     cout << parsedDB.firstName << " !\n";
                     cout << "You have already an account with us !\n";
                     cout << "Please chose other items than 01:\n";
-                }else{newAcc.nationalCode = nationalCode;
+//                }else{ cout << "Size of DB = " << parsedDB.content.size() <<"\n";
+                    newAcc.nationalCode = nationalCode;
                     newAcc.writeToFile();}
                 break;
             case 2:

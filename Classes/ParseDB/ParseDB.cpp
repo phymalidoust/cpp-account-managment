@@ -50,6 +50,8 @@ bool ParseDB::readDB() {
     }
     myFile.close();
 
+//    cout << "Size of DB = " << content.size() <<"\n";
+
     for(int i=0;i<content.size();i++)
     {
         for(int j=0;j<content[i].size();j++)
