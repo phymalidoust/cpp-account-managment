@@ -139,8 +139,6 @@ int main() {
             case 6:
                 break;
             case 7:
-                break;
-            case 8:
                 ExitQuit Ex;
                 stopFlag = Ex.stopFlag;
 //                cout << stopFlag<<endl;

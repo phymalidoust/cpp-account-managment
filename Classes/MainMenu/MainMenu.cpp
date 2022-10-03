@@ -14,10 +14,9 @@ void MainMenu::headerMenu(){
     cout << "| 02 - BALANCE ENQUIRY                          |\n";
     cout << "| 03 - DEPOSIT AMOUNT                           |\n";
     cout << "| 04 - WITHDRAW AMOUNT                          |\n";
-    cout << "| 05 - MODIFY PERSONAL INFORMATION              |\n";
-    cout << "| 06 - MODIFY ACCOUNT TYPE                      |\n";
-    cout << "| 07 - CLOSE AN ACCOUNT                         |\n";
-    cout << "| 08 - LOG OUT                                  |\n";
+    cout << "| 05 - MODIFY ACCOUNT INFORMATION              |\n";
+    cout << "| 06 - CLOSE AN ACCOUNT                         |\n";
+    cout << "| 07 - LOG OUT                                  |\n";
     cout << "|-----------------------------------------------|\n";
 
 }
@@ -37,7 +36,7 @@ unsigned int MainMenu::getChoice(unsigned int choiceInt){
             continue;}
         counter++;
     }
-    while (choiceInt <= 0 || choiceInt >= 10);
+    while (choiceInt <= 0 || choiceInt >= 8);
 
     return choiceInt;
 }
