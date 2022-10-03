@@ -14,7 +14,7 @@ void MainMenu::headerMenu(){
     cout << "| 02 - BALANCE ENQUIRY                          |\n";
     cout << "| 03 - DEPOSIT AMOUNT                           |\n";
     cout << "| 04 - WITHDRAW AMOUNT                          |\n";
-    cout << "| 05 - MODIFY ACCOUNT INFORMATION              |\n";
+    cout << "| 05 - MODIFY ACCOUNT INFORMATION               |\n";
     cout << "| 06 - CLOSE AN ACCOUNT                         |\n";
     cout << "| 07 - LOG OUT                                  |\n";
     cout << "|-----------------------------------------------|\n";
@@ -27,7 +27,7 @@ unsigned int MainMenu::getChoice(unsigned int choiceInt){
     unsigned int counter = 0;
     do {
         if(counter != 0){inputErrorInt();}
-        cout << "Please enter your choice (1-8): ";
+        cout << "Please enter your choice (1-7): ";
         cin >> inputInt;
         try{
             choiceInt = stoi(inputInt);
