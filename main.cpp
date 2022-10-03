@@ -39,7 +39,8 @@ int main() {
                     cout << parsedDB.firstName << " !\n";
                     cout << "You have already an account with us !\n";
                     cout << "Please chose other items than 01:\n";
-                }
+                }else{newAcc.nationalCode = nationalCode;
+                    newAcc.writeToFile();}
                 break;
             case 2:
                 cout << "Enter your national code (5 digits): ";
@@ -49,6 +50,9 @@ int main() {
                     cout << parsedDB.firstName << " !\n";
                     cout << "The credit of your account is " << parsedDB.credit << " NOK.\n";
 //                    cout << "Please chose other items than 01:\n";
+                }else{
+                    cout << "You don't have an account with us !\n";
+                    cout << "Please first open an account !\n";
                 }
                 break;
             case 3:

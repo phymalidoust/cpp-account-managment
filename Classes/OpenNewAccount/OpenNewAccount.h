@@ -7,7 +7,7 @@ class OpenNewAccount {
 
 public:
     OpenNewAccount();
-    void readFromFile();
+//    void readFromFile();
     void writeToFile();
     string nationalCode;
 };
