@@ -179,7 +179,7 @@ void writeToDB(ParseDB parsedDB){
                 accInfo.lastName = parsedDB.lastName;
                 accInfo.accType = parsedDB.accType;
                 accInfo.credit = parsedDB.credit;
-//                accInfo.userNo = parsedDB.userNo;
+
                 int pos=(-1)*sizeof(UserInfo);
                 myFile.seekp(pos,ios::cur);
                 myFile.write((char *) &accInfo, sizeof(UserInfo));

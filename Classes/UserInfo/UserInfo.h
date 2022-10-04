@@ -7,8 +7,11 @@ class UserInfo {
 
 public:
     UserInfo();
-    string nationalCode, firstName, lastName, accType, credit;
-    unsigned int userNo;
+    string nationalCode;
+    string firstName;
+    string lastName;
+    string accType;
+    string credit;
 };
 
 

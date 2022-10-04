@@ -3,8 +3,4 @@
 using namespace std;
 
 
-UserInfo::UserInfo() {
-
-//    string nationalCode, firstName, lastName, accType, credit;
-
-}
+UserInfo::UserInfo() {}

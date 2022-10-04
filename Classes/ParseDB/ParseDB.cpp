@@ -15,7 +15,6 @@ ParseDB::ParseDB() {}
 bool ParseDB::readDB() {
 
     bool Flag = false;
-    unsigned int userNo = 0;
 
     UserInfo accInfo;
     GetPath address;

@@ -31,7 +31,6 @@ void OpenNewAccount::writeToFile() {
     cin >> deposit;
 
 
-    unsigned int userNo = 0;
     UserInfo accInfo;
     GetPath address;
     string pathDB = address.userInfoBinary();
@@ -44,7 +43,6 @@ void OpenNewAccount::writeToFile() {
         accInfo.lastName = lastName;
         accInfo.accType = accType;
         accInfo.credit = deposit;
-        accInfo.userNo = userNo;
         myFile.write((char *) &accInfo, sizeof(UserInfo));
         MessageObj.openingDone();
     }
