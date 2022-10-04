@@ -7,7 +7,7 @@ MessagesInfo::MessagesInfo() {}
 
 void MessagesInfo::welcmWords() {
     cout << "|-----------------------------------------------|\n";
-    cout << "|                 WELCOM TO THE                 |\n";
+    cout << "|                 WELCOME TO THE                 |\n";
     cout << "|           ACCOUNT MANAGMENT SYSTEM            |\n";
     cout << "|-----------------------------------------------|\n";
 }
@@ -27,7 +27,7 @@ void MessagesInfo::headerMenu() {
 
 void MessagesInfo::openingAccount() {
     cout << "|-----------------------------------------------|\n";
-    cout << "|          THANK YOU FOR CHOSING US!            |\n";
+    cout << "|          THANK YOU FOR CHOOSING US!            |\n";
     cout << "|            Opening a new account              |\n";
     cout << "|-----------------------------------------------|\n";
 }
@@ -41,6 +41,11 @@ void MessagesInfo::openingDone() {
 
 void MessagesInfo::checkingcredit() {
     cout << "|-----------------------------------------------|\n";
-    cout << "|          Checking you account balance         |\n";
+    cout << "|          Checking your account balance         |\n";
     cout << "|-----------------------------------------------|\n";
+}
+
+void MessagesInfo::noAccountFound(){
+    cout << "You don't have an account with us !\n";
+    cout << "Please first open an account !\n";
 }

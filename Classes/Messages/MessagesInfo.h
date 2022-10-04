@@ -11,6 +11,7 @@ public:
     void openingDone();
     void checkingcredit();
     void headerMenu();
+    void noAccountFound();
 
 };
 

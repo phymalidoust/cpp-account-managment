@@ -14,6 +14,7 @@ using namespace std;
 
 void writeToDB(ParseDB);
 void deleteUser(ParseDB);
+void accountInfo(ParseDB);
 
 
 bool stopFlag = false;
@@ -31,8 +32,6 @@ int main() {
     BalanceQuery balance;
     ParseDB parsedDB;
     string YesNo;
-
-
     string temp;
 
     do{
@@ -59,8 +58,7 @@ int main() {
                     cout << parsedDB.firstName << " !\n";
                     cout << "The credit of your account is " << parsedDB.credit << " NOK.\n";
                 }else{
-                    cout << "You don't have an account with us !\n";
-                    cout << "Please first open an account !\n";
+                    MessageObj.noAccountFound();
                 }
                 break;
             case 3:
@@ -76,8 +74,7 @@ int main() {
                     writeToDB(parsedDB);
                     cout << "The credit of your account is updated to " << parsedDB.credit << " NOK.\n";
                 }else{
-                    cout << "You don't have an account with us !\n";
-                    cout << "Please first open an account !\n";
+                    MessageObj.noAccountFound();
                 }
                 break;
             case 4:
@@ -93,8 +90,7 @@ int main() {
                     writeToDB(parsedDB);
                     cout << "The credit of your account is updated to " << parsedDB.credit << " NOK.\n";
                 }else{
-                    cout << "You don't have an account with us !\n";
-                    cout << "Please first open an account !\n";
+                    MessageObj.noAccountFound();
                 }
                 break;
             case 5:
@@ -102,12 +98,7 @@ int main() {
                 cin >> nationalCode;
                 parsedDB.nationalCode = nationalCode;
                 if(parsedDB.readDB()){
-                    cout << "|-----------------------------------------------|\n";
-                    cout << "| The information of your account               \n";
-                    cout << "| 01 - First name: "<< parsedDB.firstName << "  \n";
-                    cout << "| 02 - Last name: "<< parsedDB.lastName << "    \n";
-                    cout << "| 03 - Account type: "<< parsedDB.accType << "  \n";
-                    cout << "|-----------------------------------------------|\n";
+                    accountInfo(parsedDB);
                     cout << "Which item are going to modify (1-3)? ";
                     cin >> temp;
 
@@ -128,8 +119,7 @@ int main() {
                     writeToDB(parsedDB);
                     cout << "Your account information is updated.\n";
                 }else{
-                    cout << "You don't have an account with us !\n";
-                    cout << "Please first open an account !\n";
+                    MessageObj.noAccountFound();
                 }
                 break;
             case 6:
@@ -139,13 +129,7 @@ int main() {
                 parsedDB.nationalCode = nationalCode;
                 if (parsedDB.readDB())
                 {
-                    cout << "|-----------------------------------------------|\n";
-                    cout << "| The information of your account               \n";
-                    cout << "| First name: "<< parsedDB.firstName << "  \n";
-                    cout << "| Last name: "<< parsedDB.lastName << "    \n";
-                    cout << "| Account type: "<< parsedDB.accType << "  \n";
-                    cout << "|-----------------------------------------------|\n";
-                    cout << "CLOSING YOUR ACCOUNT !\n";
+                    accountInfo(parsedDB);                    cout << "CLOSING YOUR ACCOUNT !\n";
                     cout << "Are you sure (y/n)? \n";
                     char ans;
                     ans = MainMenuObj.getYesNo(YesNo);
@@ -154,12 +138,10 @@ int main() {
                         deleteUser(parsedDB);
                         cout << "Your account was successfully closed. \n";
                     }
-                    else{MainMenuObj.headerMenu();}
                 }
                 else
                 {
-                    cout << "You don't have an account with us !\n";
-                    cout << "Please first open an account !\n";
+                    MessageObj.noAccountFound();
                 }
                 break;
             case 7:
@@ -234,5 +216,13 @@ void deleteUser(ParseDB parsedDB){
     remove("../DataBase/Accounts.dat");
     rename("../DataBase/tempDB.dat","../DataBase/Accounts.dat");
 
+}
 
+void accountInfo(ParseDB parsedDB) {
+    cout << "|-----------------------------------------------|\n";
+    cout << "| YOUR ACCOUNT INFORMATION                      \n";
+    cout << "| 01 - First name: "<< parsedDB.firstName << "  \n";
+    cout << "| 02 - Last name: "<< parsedDB.lastName << "    \n";
+    cout << "| 03 - Account type: "<< parsedDB.accType << "  \n";
+    cout << "|-----------------------------------------------|\n";
 }
