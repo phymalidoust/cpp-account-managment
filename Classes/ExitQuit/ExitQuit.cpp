@@ -23,7 +23,3 @@ ExitQuit::ExitQuit() {
     cout << "\n";
     return true;
 }
-
-bool ExitQuit::exitFlag() {
-    return true;
-}

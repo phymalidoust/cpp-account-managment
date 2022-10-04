@@ -17,8 +17,6 @@ void deleteUser(ParseDB);
 void accountInfo(ParseDB);
 
 
-bool stopFlag = false;
-string nationalCode, firstName, lastName, accType, credit;
 
 int main() {
 
@@ -33,6 +31,13 @@ int main() {
     ParseDB parsedDB;
     string YesNo;
     string temp;
+    bool stopFlag = false;
+    string nationalCode;
+    string firstName;
+    string lastName;
+    string accType;
+    string credit;
+
 
     do{
         MainMenuObj.headerMenu();
