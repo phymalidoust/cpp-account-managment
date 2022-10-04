@@ -1,10 +1,10 @@
 # Account managment system
 
-This system allows the user to create a user account 
+This system allows users to create user accounts 
 and later modify personal and credit information.  
-A menu list appears with multiple options. The user 
+A menu list appears with multiple options. The users 
 can choose what to do when the main menu pops up. 
-The options are as follows:
+The available options are:
 - [x]  **01** OPEN NEW ACCOUNT
 - [x]  **02** BALANCE ENQUIRY
 - [x]  **03** DEPOSIT AMOUNT
