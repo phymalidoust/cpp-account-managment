@@ -7,6 +7,7 @@
 #include "Classes/GetPath/GetPath.h"
 #include "Classes/ParseDB/ParseDB.h"
 #include "Classes/UserInfo/UserInfo.h"
+#include "Classes/UnitTests/UnitTests.h"
 #include <string>
 #include <vector>
 #include <fstream>
@@ -16,10 +17,15 @@ using namespace std;
 void writeToDB(ParseDB);
 void deleteUser(ParseDB);
 void accountInfo(ParseDB);
+void tests1();
 
 
 
 int main() {
+
+tests1();
+    cout << "\nPress enter to return to the main menu.\n";
+    system("read");
 
 
     MessagesInfo MessageObj;
@@ -250,4 +256,14 @@ void accountInfo(ParseDB parsedDB) {
     cout << "| 02 - Last name: "<< parsedDB.lastName << "    \n";
     cout << "| 03 - Account type: "<< parsedDB.accType << "  \n";
     cout << "|-----------------------------------------------|\n";
+}
+
+void tests1(){
+
+    UnitTests unitTestsObj;
+
+    ExitQuit exitObj;
+    unitTestsObj.passFailFunc(true, exitObj.exitFunc(), "ExitQuit");
+
+
 }
