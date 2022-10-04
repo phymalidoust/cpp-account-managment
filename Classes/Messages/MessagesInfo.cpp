@@ -49,3 +49,8 @@ void MessagesInfo::noAccountFound(){
     cout << "You don't have an account with us !\n";
     cout << "Please first open an account !\n";
 }
+
+void MessagesInfo::notOpenedFile(){
+    cout << "We couldn't open the file.\n";
+    cout << "Please contact the developer at 'phymalidoust@gmail.com'.\n";
+}

@@ -22,8 +22,7 @@ void BalanceQuery::checkCredit() {
     myFile.open(pathDB, fstream::app);
     myFile.close();
     myFile.open(pathDB, ios::in);
-    if(!myFile){cout << "We couldn't open the file.\n";
-        cout << "Please contact the developer at 'phymalidoust@gmail.com'.\n";}
+    if(!myFile){checkingMessage.notOpenedFile();}
     else{
         int counter, len, i;
         while(getline(myFile, line)){
@@ -49,8 +48,7 @@ void BalanceQuery::checkCredit() {
         }
         myFile.close();
 
-        if(!Flag) {cout << "You have no account with us.\n";
-            cout << "Please open an account first.\n";}
+        if(!Flag) {checkingMessage.notOpenedFile();}
 
     }
 

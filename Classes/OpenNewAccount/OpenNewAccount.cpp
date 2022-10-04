@@ -8,38 +8,6 @@ using namespace std;
 
 OpenNewAccount::OpenNewAccount() {}
 
-//void OpenNewAccount::readFromFile() {
-//    fstream myFile;
-//    GetPath address;
-//    string pathDB = address.dataBase();
-//    string line;
-//    bool Flag = false;
-//
-//    myFile.open(pathDB, fstream::app);
-//    myFile.close();
-//    myFile.open(pathDB, ios::in);
-//    if(!myFile){cout << "We couldn't open the file.\n";
-//                cout << "Please contact the developer at 'phymalidoust@gmail.com'.\n";}
-//    else{
-//        int counter;
-//        while(getline(myFile, line)){
-//            counter = line.find(',');
-//            if(line.substr(0,counter) == nationalCode){
-//                cout << "You have already an account with us !\n";
-//                cout << "Please chose other items than 01:\n";
-//                Flag = true;
-//                break;
-//            }
-//        }
-//        myFile.close();
-//
-//         if(!Flag) {writeToFile();}
-//
-//
-//    }
-//
-//}
-
 void OpenNewAccount::writeToFile() {
 
     MessagesInfo MessageObj;
@@ -69,12 +37,8 @@ void OpenNewAccount::writeToFile() {
     string pathDB = address.userInfoBinary();
     fstream myFile;
     myFile.open(pathDB, ios::binary | ios::out | ios::app);
-    if(!myFile){cout << "We couldn't open the file.\n";
-        cout << "Please contact the developer at 'phymalidoust@gmail.com'.\n";}
+    if(!myFile){MessageObj.notOpenedFile();}
     else {
-//        while(myFile.read((char *) &accInfo, sizeof(UserInfo))){
-//            userNo++;
-//        }
         accInfo.nationalCode = nationalCode;
         accInfo.firstName = firstName;
         accInfo.lastName = lastName;

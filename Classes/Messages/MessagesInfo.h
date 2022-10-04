@@ -12,6 +12,7 @@ public:
     void checkingcredit();
     void headerMenu();
     void noAccountFound();
+    void notOpenedFile();
 
 };
 
