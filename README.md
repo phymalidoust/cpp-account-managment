@@ -15,7 +15,7 @@ The options are as follows:
 
 
 
-The project was fully carried out by Mohammad Alidoust.
+The project was carried out by Mohammad Alidoust.
 
 
 ### Core files and their tasks

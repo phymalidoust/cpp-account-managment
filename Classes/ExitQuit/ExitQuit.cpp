@@ -5,6 +5,7 @@
 using namespace std;
 
 ExitQuit::ExitQuit() {
+    cout << "Exiting ! Are you sure?\n";
     string YesNo;
     char ans;
     MainMenu MainMenuObj;

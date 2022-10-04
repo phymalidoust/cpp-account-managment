@@ -10,6 +10,7 @@ public:
     GetPath();
     string dataBase();
     string userInfoBinary();
+    string tempDB();
 
 };
 

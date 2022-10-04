@@ -52,7 +52,7 @@ char MainMenu::getYesNo(string inputChar){
     char choiceChar;
     int n;
     unsigned int counter = 0;
-    cout << "Exiting ! Are you sure?\n";
+
     do {
         if(counter != 0){inputErrorYesNO();}
         cout << "Please enter your choice (y/n): ";

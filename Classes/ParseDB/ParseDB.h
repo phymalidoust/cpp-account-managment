@@ -15,7 +15,7 @@ public:
     string nationalCode;
 //    vector<vector<string>> content;
     string firstName, lastName, accType, credit;
-    unsigned int userNo;
+//    unsigned int userNo;
 //    bool writeToDB();
 
 };

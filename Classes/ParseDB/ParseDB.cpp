@@ -37,7 +37,7 @@ bool ParseDB::readDB() {
                 credit = accInfo.credit;
                 break;
             }
-            userNo++;
+//            userNo++;
         }
         }
     myFile.close();

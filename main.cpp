@@ -13,6 +13,7 @@
 using namespace std;
 
 void writeToDB(ParseDB);
+void deleteUser(ParseDB);
 
 
 bool stopFlag = false;
@@ -30,6 +31,7 @@ int main() {
     OpenNewAccount newAcc;
     BalanceQuery balance;
     ParseDB parsedDB;
+    string YesNo;
 //    parsedDB.existDB();
 //    parsedDB.readDB();
 
@@ -137,6 +139,34 @@ int main() {
                 }
                 break;
             case 6:
+
+                cout << "Enter your national code (5 digits): ";
+                cin >> nationalCode;
+                parsedDB.nationalCode = nationalCode;
+                if (parsedDB.readDB())
+                {
+                    cout << "|-----------------------------------------------|\n";
+                    cout << "| The information of your account               \n";
+                    cout << "| First name: "<< parsedDB.firstName << "  \n";
+                    cout << "| Last name: "<< parsedDB.lastName << "    \n";
+                    cout << "| Account type: "<< parsedDB.accType << "  \n";
+                    cout << "|-----------------------------------------------|\n";
+                    cout << "CLOSING YOUR ACCOUNT !\n";
+                    cout << "Are you sure (y/n)? \n";
+                    char ans;
+                    ans = MainMenuObj.getYesNo(YesNo);
+                    if(ans == 'y')
+                    {
+                        deleteUser(parsedDB);
+                        cout << "Your account was successfully closed. \n";
+                    }
+                    else{MainMenuObj.headerMenu();}
+                }
+                else
+                {
+                    cout << "You don't have an account with us !\n";
+                    cout << "Please first open an account !\n";
+                }
                 break;
             case 7:
                 ExitQuit Ex;
@@ -178,7 +208,7 @@ void writeToDB(ParseDB parsedDB){
                 accInfo.lastName = parsedDB.lastName;
                 accInfo.accType = parsedDB.accType;
                 accInfo.credit = parsedDB.credit;
-                accInfo.userNo = parsedDB.userNo;
+//                accInfo.userNo = parsedDB.userNo;
                 int pos=(-1)*sizeof(UserInfo);
                 myFile.seekp(pos,ios::cur);
                 myFile.write((char *) &accInfo, sizeof(UserInfo));
@@ -187,5 +217,38 @@ void writeToDB(ParseDB parsedDB){
         }
     }
     myFile.close();
+
+}
+
+void deleteUser(ParseDB parsedDB){
+    UserInfo accInfo;
+    GetPath address;
+    string pathDB = address.userInfoBinary();
+    fstream myFile;
+    string tempDB = address.tempDB();
+    fstream tempFile;
+
+    myFile.open(pathDB, ios::binary | ios::in);
+    if(!myFile){cout << "We couldn't open main DB.\n";
+        cout << "Please contact the developer at 'phymalidoust@gmail.com'.\n";}
+    else{
+        tempFile.open(tempDB, ios::binary | ios::out | ios::app);
+        tempFile.seekg(0,ios::beg);
+        if(!tempFile){cout << "We couldn't open temp DB.\n";
+            cout << "Please contact the developer at 'phymalidoust@gmail.com'.\n";}
+        else{
+            while(myFile.read((char *) &accInfo, sizeof(UserInfo))) {
+                if (!(parsedDB.nationalCode == accInfo.nationalCode))
+                {
+                    tempFile.write((char *) &accInfo, sizeof(UserInfo));
+                }
+            }
+        }
+    }
+    myFile.close();
+    tempFile.close();
+    remove("../DataBase/Accounts.dat");
+    rename("../DataBase/tempDB.dat","../DataBase/Accounts.dat");
+
 
 }
