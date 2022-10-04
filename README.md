@@ -10,7 +10,7 @@ The options are as follows:
 - [x]  **03** DEPOSIT AMOUNT
 - [x]  **04** WITHDRAW AMOUNT 
 - [x]  **05** MODIFY ACCOUNT INFORMATION
-- [x]  **06** CLOSE AN ACCOUNT
+- [x]  **06** CLOSE ACCOUNT
 - [x]  **07** LOG OUT
 
 
