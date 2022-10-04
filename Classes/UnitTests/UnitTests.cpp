@@ -1,17 +1,7 @@
 #include <iostream>
-#include "../Messages/MessagesInfo.h"
-#include "../MainMenu/MainMenu.h"
-#include "../ExitQuit/ExitQuit.h"
-#include "../OpenNewAccount/OpenNewAccount.h"
-#include "../BalanceQuery/BalanceQuery.h"
-#include "../GetPath/GetPath.h"
-#include "../ParseDB/ParseDB.h"
-#include "../UserInfo/UserInfo.h"
-#include "UnitTests.h"
 #include <string>
 #include <vector>
-#include <fstream>
-#include <cstdlib>
+#include "UnitTests.h"
 using namespace std;
 
 UnitTests::UnitTests(){};

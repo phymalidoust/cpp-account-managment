@@ -23,9 +23,14 @@ void tests1();
 
 int main() {
 
-tests1();
-    cout << "\nPress enter to return to the main menu.\n";
-    system("read");
+    bool unitTesting = false;
+
+    if(unitTesting = true){
+        tests1();
+        cout << "\nPress enter to return to the main menu.\n";
+        system("read");
+    }
+
 
 
     MessagesInfo MessageObj;
