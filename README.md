@@ -20,9 +20,16 @@ The project was carried out by Mohammad Alidoust.
 
 ### Core files and their tasks
 ```buildoutcfg
-The source code is commented. 
-1. 'main.cpp' 
-2.
+The components of the source code. 
+
+1. 'main.cpp': Handeling requests
+2. 'MainMenu': Creating main menu, Getting user response
+3. 'GetPath' : Returning requested paths
+4. 'Messages': Returning messages
+5. 'OpenNewAccount': Opens new accounts
+6. 'ParseDB': Opening and screening data base
+7. 'BalanceQuery': Returning credit requests
+8. 'UserInfo': Storing user information
 ```
 ### How to run it
 ```c++20
