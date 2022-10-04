@@ -10,6 +10,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <cstdlib>
 using namespace std;
 
 void writeToDB(ParseDB);
@@ -60,8 +61,12 @@ int main() {
                 cin >> nationalCode;
                 parsedDB.nationalCode = nationalCode;
                 if(parsedDB.readDB()){
-                    cout << parsedDB.firstName << " !\n";
-                    cout << "The credit of your account is " << parsedDB.credit << " NOK.\n";
+                    cout << "|-----------------------------------------------\n";
+                    cout << "| " << parsedDB.firstName << " !\n";
+                    cout <<"| " <<  "The credit of your account is " << parsedDB.credit << " NOK.\n";
+                    cout << "|-----------------------------------------------\n";
+                    cout << "\nPress enter to return to the main menu.\n";
+                    system("read");
                 }else{
                     MessageObj.noAccountFound();
                 }
@@ -71,13 +76,17 @@ int main() {
                 cin >> nationalCode;
                 parsedDB.nationalCode = nationalCode;
                 if(parsedDB.readDB()){
-                    cout << parsedDB.firstName << " !\n";
-                    cout << "The credit of your account is " << parsedDB.credit << " NOK.\n";
-                    cout << "How much do you like to add (NOK)? ";
+                    cout << "|-----------------------------------------------\n";
+                    cout << "| " << parsedDB.firstName << " !\n";
+                    cout << "| " << "The credit of your account is " << parsedDB.credit << " NOK.\n";
+                    cout << "| " << "How much do you like to add (NOK)? ";
                     cin >> temp;
                     parsedDB.credit = to_string((stoi(temp) + stoi(parsedDB.credit)));
                     writeToDB(parsedDB);
-                    cout << "The credit of your account is updated to " << parsedDB.credit << " NOK.\n";
+                    cout << "| " << "The credit of your account was updated to " << parsedDB.credit << " NOK.\n";
+                    cout << "|-----------------------------------------------\n";
+                    cout << "\nPress enter to return to the main menu.\n";
+                    system("read");
                 }else{
                     MessageObj.noAccountFound();
                 }
@@ -87,13 +96,17 @@ int main() {
                 cin >> nationalCode;
                 parsedDB.nationalCode = nationalCode;
                 if(parsedDB.readDB()){
-                    cout << parsedDB.firstName << " !\n";
-                    cout << "The credit of your account is " << parsedDB.credit << " NOK.\n";
-                    cout << "How much do you like to withdraw (NOK)? ";
+                    cout << "|-----------------------------------------------\n";
+                    cout << "| " << parsedDB.firstName << " !\n";
+                    cout << "| " << "The credit of your account is " << parsedDB.credit << " NOK.\n";
+                    cout << "| " << "How much do you like to withdraw (NOK)? ";
                     cin >> temp;
                     parsedDB.credit = to_string((-stoi(temp) + stoi(parsedDB.credit)));
                     writeToDB(parsedDB);
-                    cout << "The credit of your account is updated to " << parsedDB.credit << " NOK.\n";
+                    cout << "| " << "The credit of your account was updated to " << parsedDB.credit << " NOK.\n";
+                    cout << "|-----------------------------------------------\n";
+                    cout << "\nPress enter to return to the main menu.\n";
+                    system("read");
                 }else{
                     MessageObj.noAccountFound();
                 }
@@ -122,7 +135,11 @@ int main() {
                                 break;
                         }
                     writeToDB(parsedDB);
-                    cout << "Your account information is updated.\n";
+                    cout << "| " << "Your account information was updated.\n";
+                    accountInfo(parsedDB);
+//                    cout << "|-----------------------------------------------\n";
+                    cout << "\nPress enter to return to the main menu.\n";
+                    system("read");
                 }else{
                     MessageObj.noAccountFound();
                 }
@@ -141,7 +158,10 @@ int main() {
                     if(ans == 'y')
                     {
                         deleteUser(parsedDB);
-                        cout << "Your account was successfully closed. \n";
+                        cout << "| " << "Your account was successfully closed. \n";
+                        cout << "|-----------------------------------------------\n";
+                        cout << "\nPress enter to return to the main menu.\n";
+                        system("read");
                     }
                 }
                 else
