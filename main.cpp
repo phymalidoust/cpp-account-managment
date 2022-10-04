@@ -18,7 +18,6 @@ void deleteUser(ParseDB);
 
 bool stopFlag = false;
 string nationalCode, firstName, lastName, accType, credit;
-//vector<vector<string>> content;
 
 int main() {
 
@@ -26,22 +25,18 @@ int main() {
     MessagesInfo MessageObj;
     MessageObj.welcmWords();
     MainMenu MainMenuObj;
-    MainMenuObj.headerMenu();
+
     unsigned int MainMenuChoice;
     OpenNewAccount newAcc;
     BalanceQuery balance;
     ParseDB parsedDB;
     string YesNo;
-//    parsedDB.existDB();
-//    parsedDB.readDB();
 
-//UserInfo accountInfo;
-//accountInfo.firstName = "Hasan";
-//cout << accountInfo.firstName<<endl;
 
     string temp;
 
     do{
+        MainMenuObj.headerMenu();
         MainMenuChoice = MainMenuObj.getChoice(0);
         switch (MainMenuChoice) {
             case 1:
@@ -63,7 +58,6 @@ int main() {
                 if(parsedDB.readDB()){
                     cout << parsedDB.firstName << " !\n";
                     cout << "The credit of your account is " << parsedDB.credit << " NOK.\n";
-//                    cout << "Please chose other items than 01:\n";
                 }else{
                     cout << "You don't have an account with us !\n";
                     cout << "Please first open an account !\n";
@@ -171,20 +165,10 @@ int main() {
             case 7:
                 ExitQuit Ex;
                 stopFlag = Ex.stopFlag;
-//                cout << stopFlag<<endl;
         }
 
     }while (!stopFlag);
 
-
-
-
-//    GetPath db;
-//    cout << db.dataBase();
-
-//    string input;
-//    cin >> input;
-//    cout << stoi(input);
 
 
 

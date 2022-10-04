@@ -8,16 +8,9 @@ using namespace std;
 MainMenu::MainMenu() {}
 
 void MainMenu::headerMenu(){
-    cout << "|-----------------------------------------------|\n";
-    cout << "| MAIN MENU                                     |\n";
-    cout << "| 01 - OPEN NEW ACCOUNT                         |\n";
-    cout << "| 02 - BALANCE ENQUIRY                          |\n";
-    cout << "| 03 - DEPOSIT AMOUNT                           |\n";
-    cout << "| 04 - WITHDRAW AMOUNT                          |\n";
-    cout << "| 05 - MODIFY ACCOUNT INFORMATION               |\n";
-    cout << "| 06 - CLOSE AN ACCOUNT                         |\n";
-    cout << "| 07 - LOG OUT                                  |\n";
-    cout << "|-----------------------------------------------|\n";
+
+    MessagesInfo message;
+    message.headerMenu();
 
 }
 

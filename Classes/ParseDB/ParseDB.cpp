@@ -3,7 +3,6 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include <sstream>
 #include "../GetPath/GetPath.h"
 #include "../UserInfo/UserInfo.h"
 
@@ -15,7 +14,6 @@ ParseDB::ParseDB() {}
 
 bool ParseDB::readDB() {
 
-//    string firstName, lastName, accType, credit;
     bool Flag = false;
     unsigned int userNo = 0;
 
@@ -37,7 +35,6 @@ bool ParseDB::readDB() {
                 credit = accInfo.credit;
                 break;
             }
-//            userNo++;
         }
         }
     myFile.close();

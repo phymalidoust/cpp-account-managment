@@ -10,6 +10,7 @@ public:
     void openingAccount();
     void openingDone();
     void checkingcredit();
+    void headerMenu();
 
 };
 
