@@ -33,6 +33,7 @@ CLASSES
 08. 'UserInfo': Storing user information
 09. 'DataBase': Storing dataBases
 10. 'ExitQuit': Quiting the program
+11. 'UnitTests': Testing program units
 ```
 ### How to run it
 ```c++20
