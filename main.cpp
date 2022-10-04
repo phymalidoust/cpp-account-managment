@@ -25,7 +25,7 @@ int main() {
 
     bool unitTesting = false;
 
-    if(unitTesting = true){
+    if(unitTesting == true){
         tests1();
         cout << "\nPress enter to return to the main menu.\n";
         system("read");
