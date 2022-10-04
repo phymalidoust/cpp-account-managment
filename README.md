@@ -37,4 +37,8 @@ The C++20 compiler is used to compile and debug the code.
 The following command can be used to run the code
  
 g++ -o main.exe main.cpp; ./main.exe
+
+Note. This command is not universal.
+One may need adjustments, depending on your OS.
+
 ```
